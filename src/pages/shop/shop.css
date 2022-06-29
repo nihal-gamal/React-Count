@@ -1,0 +1,11 @@
+.link{
+    text-decoration: none;
+    color: black;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+img{
+    height: 400px;
+}

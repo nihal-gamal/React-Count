@@ -1,0 +1,38 @@
+import {useParams} from "react-router-dom";
+import {useEffect} from 'react';
+import {useState} from 'react';
+import'./shop.css';
+
+function Products() {
+    const {id} = useParams();
+    useEffect(() => {
+        // console.log("shop mounted");
+        fetchProdApi()
+    })
+    const [product, setProduct] =useState([]);
+    const fetchProdApi = () => { 
+        fetch(`https://fakestoreapi.com/products/${id}`)
+            .then(res=>res.json())
+            .then(json=>setProduct(json))
+            // console.log(product);
+    }
+    return (
+        
+        <div className="container">
+                {product?
+                        <div className="border w-25 m-auto p-3">
+                                    <img src={product.image} alt="img" className="iw-100"></img>
+                                    <h3>{product.title}</h3>
+                                    <p>{product.description}</p>
+                                    <h3>{product.price}$</h3>
+                        </div>
+                :
+                <div className="spinner-border m-auto" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>}
+        </div>
+        
+    )
+}
+
+export default Products;
