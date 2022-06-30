@@ -1,6 +1,7 @@
 .link{
     text-decoration: none;
     color: black;
+    height: 400px;
 }
 .flex{
     display: flex;

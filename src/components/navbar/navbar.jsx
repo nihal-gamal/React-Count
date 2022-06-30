@@ -13,16 +13,19 @@ function NavComponent
         <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" to='/'>Home</NavLink>
+                <NavLink className="nav-link " style={{color:"black"}} aria-current="page" to='/'>Home</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to='/about' >About</NavLink>
+                <NavLink className="nav-link" style={{color:"black"}} to='/about' >About</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to='/shop'>Shop</NavLink>
+                <NavLink className="nav-link" style={{color:"black"}} to='/shop'>Shop</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link " to='/count'>Counter</NavLink>
+                <NavLink className="nav-link " style={{color:"black"}} to='/count'>Counter</NavLink>
+            </li>
+            <li className="nav-item">
+                <NavLink className="nav-link " style={{color:"black"}} to='/todo'>Todo</NavLink>
             </li>
         </ul>
         </div>

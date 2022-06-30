@@ -20,18 +20,17 @@ function Shop() {
     return (
         <div className="container ">
             <h1>shop</h1>
-            
-                <div className='row'>
+                <div className='row d-flex justify-content-center '>
                 {products.length>0?
                     products.map((product,i)=>{
                         return(
-                        <div  key={product.id} className="col-4">
+                        <div  key={product.id} className="col-lg-4 text-center">
                             <Link to={`/shop/${product.id}`} className="link" >
                                     <div className="card p-3 mb-3 ">
-                                    <img src={product.image} alt="img" className='w-100' ></img>
-                                    <h3>{product.title}</h3>
-                                    <p>{product.description}</p>
-                                    <h3>{product.price}$</h3>
+                                    <img src={product.image} alt="img" className='w-25 img-fluid d-flex m-auto' ></img>
+                                    <h6 className='mt-3 mb-3'>{product.title}</h6>
+                                    {/* <p>{product.description}</p> */}
+                                    <h5>{product.price}$</h5>
                                     </div>
                             </Link>
                         </div>

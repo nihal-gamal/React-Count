@@ -19,9 +19,9 @@ function Products() {
     return (
         
         <div className="container">
-                {product?
+                {product.id?
                         <div className="border w-25 m-auto p-3">
-                                    <img src={product.image} alt="img" className="iw-100"></img>
+                                    <img src={product.image} alt="img" className="w-100"></img>
                                     <h3>{product.title}</h3>
                                     <p>{product.description}</p>
                                     <h3>{product.price}$</h3>
