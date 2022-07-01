@@ -8,7 +8,7 @@ function Products() {
     useEffect(() => {
         // console.log("shop mounted");
         fetchProdApi()
-    })
+    },[])
     const [product, setProduct] =useState([]);
     const fetchProdApi = () => { 
         fetch(`https://fakestoreapi.com/products/${id}`)

@@ -1,12 +1,14 @@
-import {  deleteActionTodo } from "../../redux";
+
 import {useDispatch, useSelector} from "react-redux";
+import {deleteTodoSlice} from "../../redux/features/todoSlice";
 
 const TodoList = () => {
-  const todos = useSelector ((state)=> state.todos)
+  const todos = useSelector (state=> state.todoSlice.todos)
+  // console.log( useSelector((state)=> state));
   const dispatch = useDispatch();
   const deleteTodo = (index) => {
     console.log(index);
-    dispatch(deleteActionTodo(index))
+    dispatch(deleteTodoSlice(index))
   }
   const todosList =
     todos && todos.length > 0 ? (
