@@ -1,19 +1,17 @@
 
 import { createSlice ,createAsyncThunk} from '@reduxjs/toolkit';
 
-// const baseUrl= 'https://fakestoreapi.com/products';
+const baseUrl= 'https://fakestoreapi.com/products';
 export const getProducts = createAsyncThunk("shop/getProducts",()=>{
-    fetch('https://fakestoreapi.com/products')
+    return fetch(baseUrl)
             .then(res=>res.json())
             .then(json=>(json))
 })
-
 const initialState ={
     products:[],
     loading:false,
     error:{},
 }
-
 export const shopSlice = createSlice({
     name:'shop',
     initialState,
@@ -22,9 +20,7 @@ export const shopSlice = createSlice({
             state.loading=true;
         },
         [getProducts.fulfilled] :(state ,action)=>{
-            console.log("fulfilled");
             state.products = action.payload
-            console.log(action);
             state.loading=false;
         },
         [getProducts.rejected] :(state ,action)=>{
@@ -34,6 +30,4 @@ export const shopSlice = createSlice({
     }
 
 })
-
-// export const {getProducts}=shopSlice.actions
 export default shopSlice.reducer

@@ -9,11 +9,12 @@ import About from './pages/about/about';
 import NavComponent from './components/navbar/navbar';
 import Products from './pages/shop/products';
 import Todo from './pages/todo/Todo';
+import Register from './pages/Register/index';
 
 function App() {
   
   return (
-    <div className='text-center'>
+    <div >
       <BrowserRouter>
         <NavComponent/>
         <Routes>
@@ -22,6 +23,7 @@ function App() {
           <Route path='/shop' element={<Shop/>}/>
           <Route path='/count' element={<Count/>}/>
           <Route path='/todo' element={<Todo/>}/>
+          <Route path='/register' element={<Register/>}/>
           <Route path='/shop/:id' element={<Products/>}/>
         </Routes>
       </BrowserRouter>

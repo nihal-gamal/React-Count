@@ -27,6 +27,9 @@ function NavComponent
             <li className="nav-item">
                 <NavLink className="nav-link " style={{color:"black"}} to='/todo'>Todo</NavLink>
             </li>
+            <li className="nav-item">
+                <NavLink className="nav-link " style={{color:"black"}} to='/register'>Register</NavLink>
+            </li>
         </ul>
         </div>
     </div>

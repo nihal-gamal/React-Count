@@ -6,7 +6,6 @@ import'./shop.css';
 function Products() {
     const {id} = useParams();
     useEffect(() => {
-        // console.log("shop mounted");
         fetchProdApi()
     },[])
     const [product, setProduct] =useState([]);
@@ -14,11 +13,10 @@ function Products() {
         fetch(`https://fakestoreapi.com/products/${id}`)
             .then(res=>res.json())
             .then(json=>setProduct(json))
-            // console.log(product);
     }
     return (
         
-        <div className="container">
+        <div className="container text-center">
                 {product.id?
                         <div className="border w-25 m-auto p-3">
                                     <img src={product.image} alt="img" className="w-100"></img>

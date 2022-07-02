@@ -10,26 +10,15 @@ import { getProducts } from '../../redux/features/shopSlice';
 function Shop() {
     const dispatch = useDispatch()
     useEffect(() => {
-        // console.log("shop mounted");
-        // fetchApi()
         dispatch(getProducts())
     },[])
     const {products,loading} = useSelector(state => state.shopSlice);
-    
-    // const [products, setProducts] =useState([]);
-    // const fetchApi = () => { 
-    //     fetch('https://fakestoreapi.com/products')
-    //         .then(res=>res.json())
-    //         .then(json=>setProducts(json))
-    //         // console.log(products);
-    // }
-    // console.log(products)
     return (
-        <div className="container ">
-            <h1>shop</h1>
-                <div className='row d-flex justify-content-center '>
+        <div className="container text-center">
+            <h1 >shop</h1>
+                <div >
                     {!loading ?(
-                        <div>
+                        <div className='row d-flex justify-content-center '>
                             {products?.map((product)=>{
                                 return(
                                 <div  key={product.id} className="col-lg-4 text-center">
