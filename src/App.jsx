@@ -19,7 +19,6 @@ function App() {
         <NavComponent/>
         <Routes>
           <Route path='/' element={<Home/>}/> 
-          <Route path='/about' element={<About/>}/>
           <Route path='/shop' element={<Shop/>}/>
           <Route path='/count' element={<Count/>}/>
           <Route path='/todo' element={<Todo/>}/>

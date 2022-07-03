@@ -17,9 +17,10 @@ const TodoForm = () => {
   return (
     <div>
       <h3 className="text-muted mb-4">Add a TODO</h3>
-      <form onSubmit={handleSubmission}>
+      <form onSubmit={handleSubmission} className="mx-auto w-50 ">
         Title <br />
         <input
+          className="form-control d-block "
           type="text"
           name="title"
           value={title}
@@ -27,11 +28,12 @@ const TodoForm = () => {
         />
         <br />
         Content <br />
-        <textarea
+        <input
+          className="form-control d-block p-2"
           name="content"
           value={content}
           onChange={(e) => setContent(e.target.value)}
-        ></textarea>
+        />
         <br />
         <button className="my-4 btn btn-primary btn-sm px-4" type="submit">
           Add Todo

@@ -4,16 +4,16 @@ import {createSlice} from "@reduxjs/toolkit";
 const initialState ={
     todos:[
             {
-                title: "learn node js",
-                content: "Lorem ipsum dolor sit amet.",
+                title: "html",
+                content: " ",
             },
             {
-                title: "go to the sea",
-                content: "Lorem ipsum dolor sit amet.",
+                title: "css",
+                content: " ",
             },
             {
-                title: "walk the dog",
-                content: "Lorem ipsum dolor sit amet.",
+                title: "js",
+                content: "",
             },
             ],
 };

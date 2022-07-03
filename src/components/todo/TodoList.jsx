@@ -14,13 +14,13 @@ const TodoList = () => {
     todos && todos.length > 0 ? (
       todos.map((todo, i) => {
         return (
-          <div key={i} className="d-flex justify-content-between border w-50 m-auto my-3 align-items-center">
+          <div key={i} className="d-flex justify-content-between border w-50 m-auto my-3 align-items-center form-control">
           <ul >
-            <li className=" d-flex">
-            <div className="text">
+            <li  className="mt-4">
+            
               <p>Title : {todo.title}</p>
               <p>Content : {todo.content}</p>
-            </div>
+            
             </li>
           </ul>
           <button className="btn btn-danger d-block btn-sm" onClick={() => deleteTodo (i)}>x</button>
